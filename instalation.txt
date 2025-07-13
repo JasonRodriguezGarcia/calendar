@@ -1,0 +1,76 @@
+npm create vite@latest frontend
+
+npm install @aldabil/react-scheduler @mui/material @emotion/react @emotion/styled date-fns
+npm install dayjs @mui/x-date-pickers @date-io/dayjs
+
+App.jsx
+import { Scheduler } from "@aldabil/react-scheduler";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+
+const events = [
+  {
+    event_id: 1,
+    title: "Reunión equipo",
+    start: new Date("2025-07-12T09:00:00"),
+    end: new Date("2025-07-12T10:30:00"),
+  },
+];
+
+function App() {
+  return (
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <Scheduler
+        view="week"
+        events={events}
+        editable
+        deletable
+        draggable
+      />
+    </LocalizationProvider>
+  );
+}
+
+export default App;
+
+
+****************
+
+npm install @aldabil/react-scheduler @mui/material @emotion/react @emotion/styled dayjs @mui/x-date-pickers @date-io/dayjs
+
+import { Scheduler } from "@aldabil/react-scheduler";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+
+const events = [
+  {
+    event_id: 1,
+    title: "Reunión",
+    start: new Date("2025-07-10T10:00:00"),
+    end: new Date("2025-07-10T11:00:00"),
+  },
+];
+
+function App() {
+  return (
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <Scheduler
+        view="week"
+        events={events}
+        editable
+        deletable
+        draggable
+      />
+    </LocalizationProvider>
+  );
+}
+
+export default App;
+
+*********
+
+    git add .
+    git commit -m "first commit"
+    git remote add origin https://github.com/JasonRodriguezGarcia/PlayArena.git
+    git branch -M main
+    git push -u origin main
