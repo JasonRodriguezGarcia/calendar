@@ -1,3 +1,5 @@
+// VERSION PARA CALENDAR CON COLORES
+
 import { Scheduler } from "@aldabil/react-scheduler";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers";
