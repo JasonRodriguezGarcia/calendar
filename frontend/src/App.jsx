@@ -8,8 +8,8 @@ const initialEvents = [
     event_id: Date.now(), // ✅ ID generado una sola vez al cargar
     title: "Reunión",
     subtitle: "Asamblea de majaras",
-    start: new Date("2025-07-14T10:00:00"),
-    end: new Date("2025-07-14T11:00:00"),
+    start: new Date("2025-07-19T10:00:00"),
+    end: new Date("2025-07-19T11:00:00"),
     descripcion: "Vaña peña que viene",
     user_id: 1,
     color: "blue"
